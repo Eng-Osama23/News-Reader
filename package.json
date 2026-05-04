@@ -6,7 +6,9 @@
     "server:install": "npm install --prefix server && npm install --prefix web && npm install",
     "server:dev": "npm --prefix server run dev",
     "web:dev": "npm --prefix web run dev",
-    "dev": "concurrently -k -n server,web -c cyan,yellow \"npm run server:dev\" \"npm run web:dev\""
+    "dev": "concurrently -k -n server,web -c cyan,yellow \"npm run server:dev\" \"npm run web:dev\"",
+    "build": "npm --prefix web run build",
+    "vercel-build": "npm --prefix web run build"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
